@@ -1,25 +1,30 @@
+// Definindo os limites de XP e seus respectivos títulos
+function definirTituloPorXP(xp) {
+    if (xp <= 1000) {
+        return "Ferro";
+    } else if (xp <= 2000) {
+        return "Bronze";
+    } else if (xp <= 5000) {
+        return "Prata";
+    } else if (xp <= 7000) {
+        return "Ouro";
+    } else if (xp <= 8000) {
+        return "Platina";
+    } else if (xp <= 9000) {
+        return "Ascendente";
+    } else if (xp <= 10000) {
+        return "Imortal";
+    } else {
+        return "Radiante";
+    }
+}
+
+// Dados do herói
 let nomeDeHeroi = "Wellzinho";
 let xpDeHeroi = 3000;
 
-if (xpDeHeroi <= 1000) {
-    xpDeHeroi = "Ferro";
-} else if (xpDeHeroi <= 2000) {
-    xpDeHeroi = "Bronze";
-} else if (xpDeHeroi <= 5000) {
-    xpDeHeroi = "Prata";
-} else if (xpDeHeroi <= 7000) {
-    xpDeHeroi = "Ouro";
-} else if (xpDeHeroi <= 8000) {
-    xpDeHeroi = "Platina";
-} else if (xpDeHeroi <= 9000) {
-    xpDeHeroi = "Ascendente";
-} else if (xpDeHeroi <= 10000) {
-    xpDeHeroi = "Imortal";
-} else if (xpDeHeroi >= 10001) {
-    xpDeHeroi = "Radiante";
-} else {
-    xpDeHeroi = "Inexistente";
-}
+// Chama a função para obter o título
+let nivelDeHeroi = definirTituloPorXP(xpDeHeroi);
 
-console.log("O herói de nome " + nomeDeHeroi + " está no nivel de " + xpDeHeroi
-);
+// Exibe o resultado no console
+console.log(`O herói de nome ${nomeDeHeroi} está no nível de ${nivelDeHeroi}`);
