@@ -1,5 +1,5 @@
 let nomeDeHeroi = "Wellzinho";
-let xpDeHeroi = 3000;
+let xpDeHeroi = 5001;
 
 if (xpDeHeroi <= 1000) {
     xpDeHeroi = "Ferro";
