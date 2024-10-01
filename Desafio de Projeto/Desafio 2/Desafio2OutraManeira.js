@@ -1,22 +1,27 @@
 // Dados do herói
-const hero = {
-    name: "Deku",
-    victories: 15,
-    getLevel: function() {
-        const rankLevels = [
-            { min: 0, max: 9, rank: "Ferro" },
-            { min: 10, max: 19, rank: "Bronze" },
-            { min: 20, max: 49, rank: "Prata" },
-            { min: 50, max: 69, rank: "Ouro" },
-            { min: 70, max: 79, rank: "Platina" },
-            { min: 80, max: 89, rank: "Ascendente" },
-            { min: 90, max: 99, rank: "Imortal" },
-            { min: 100, max: Infinity, rank: "Radiante" }
-        ];
+let nameHero = "Goku";
+let victories = 101;
 
-        // Encontrar o nível correspondente ao número de vitórias
-        return rankLevels.find(level => this.victories >= level.min && this.victories <= level.max).rank;
+// Função para obter o nível baseado nas vitórias
+function getHeroLevel(victories) {
+    switch (true) {
+        case (victories < 10):
+            return "Ferro";
+        case (victories < 20):
+            return "Bronze";
+        case (victories < 50):
+            return "Prata";
+        case (victories < 70):
+            return "Ouro";
+        case (victories < 80):
+            return "Platina";
+        case (victories < 90):
+            return "Ascendente";
+        case (victories < 100):
+            return "Imortal";
+        default:
+            return "Radiante";
     }
-};
+}
 
-console.log(`O herói ${hero.name} tem saldo de ${hero.victories} vitórias e está no nível de ${hero.getLevel()}`);
+console.log(`O herói ${nameHero} tem saldo de ${victories} vitórias e está no nível de ${getHeroLevel(victories)}`);
